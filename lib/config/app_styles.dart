@@ -5,6 +5,7 @@ enum Sizes {
   s12(12.0),
   s14(14.0),
   s16(16.0),
+  s18(18.0),
   s50(40.0);
 
   const Sizes(this.value);

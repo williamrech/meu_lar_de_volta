@@ -4,11 +4,13 @@ class UserModel {
   final List<Map<String, dynamic>> listOfMap;
   final List<NeedModel> needs;
   final String address;
+  final String description;
   final String fullName;
   final String phone;
 
   UserModel({
     required this.address,
+    required this.description,
     required this.fullName,
     required this.listOfMap,
     required this.needs,
@@ -28,6 +30,7 @@ class UserModel {
     return UserModel(
       address: add,
       fullName: map['fullName'] ?? '',
+      description: map['description'] ?? '',
       listOfMap: list,
       needs: e.map((e) => NeedModel.fromMap(e)).toList(),
       phone: map['phone'] ?? '',

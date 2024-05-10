@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(user.fullName, style: AppStyles.bold(Sizes.s14, Colors.white)),
+                        Text(user.fullName.trim().split(' ').first, style: AppStyles.bold(Sizes.s18, Colors.white)),
                         const SizedBox(height: 10),
                         Wrap(
                           spacing: 4,
@@ -70,6 +70,8 @@ class _HomePageState extends State<HomePage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Text('Relato: "${_bloc.user.description}"', style: AppStyles.regular(Sizes.s14)),
+                          const SizedBox(height: 10),
                           Text('Posso ajudar com:', style: AppStyles.bold(Sizes.s14)),
                           const SizedBox(height: 10),
                           Column(
